@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/addressList/addressList",
+    "pages/schedule/schedule"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "项目",
+    "navigationBarTextStyle":"black"
+  }
+}

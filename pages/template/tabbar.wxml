@@ -1,0 +1,13 @@
+<!-- 整个tabbar -->
+<template name="tab-bar">
+  <view class="page-footer">
+    <view class="page-footer-box" wx:for="{{tabItems}}" wx:key="*.this">
+      <navigator url="{{item.url}}" bindtap="bindNav" open-type="redirect">
+        <view class="page-footer-img">
+          <image src="{{item.icon}}" />
+        </view>
+        <view class="page-footer-text + {{item.actived}}">{{item.text}}</view>
+      </navigator>
+    </view>
+  </view>
+</template>

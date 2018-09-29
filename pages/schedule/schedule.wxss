@@ -1,0 +1,104 @@
+.schedule-date {
+  position: relative;
+}
+.schedule-date-month {
+  font-size: 36rpx;
+  text-align: center;
+  padding: 20rpx 0 24rpx 0;
+  background-color: #fff;
+  border-top: 2rpx solid #f5f5f5;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+.schedule-date-month image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.schedule-date-month image.prev-week {
+  margin-right: 30rpx;
+}
+.schedule-date-month image.next-week {
+  margin-left: 30rpx;
+}
+.schedule-date-day {
+  background-color: #fff;
+  padding: 20rpx 0 30rpx 0;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.schedule-date-day .week {
+  font-size: 28rpx;
+  color: #ccc;
+  overflow: hidden;
+}
+.schedule-date-day .day {
+  font-size: 32rpx;
+  margin-top: 8rpx;
+  overflow: hidden;
+  transition: height .3s ease-in-out;
+}
+.schedule-date-day .week view, .schedule-date-day .day view {
+  width: 107rpx;
+  text-align: center;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.schedule-date-day .day text {
+  display: block;
+}
+.schedule-date-day .day text.active {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #2a579a;
+  margin: 0 auto;
+}
+.schedule-date-day .day text.active.selected, .schedule-date-day .day text.selected {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 2rpx solid #2a579a;
+  background-color: #fff;
+  color: #000;
+}
+.schedule-box .schedule-line {
+  color:#a9a9a9;
+  height: 128rpx;
+  line-height: 128rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.schedule-box .schedule-line .text-left {
+  float: left;
+  width: 176rpx;
+  color: #afafb0;
+  background-color: #f2f2f2;
+  font-size: 36rpx;
+  text-align: center;
+}
+.schedule-box .schedule-line .text-left.blue {
+  color: #2e61ad;
+  background-color: #dbe9ff;
+}
+.schedule-line .schedule-con {
+  float: left;
+  width: 554rpx;
+  padding: 11rpx 0 12rpx 20rpx;
+}
+.schedule-line .schedule-title {
+  color: #000;
+  font-size: 32rpx;
+}
+.schedule-line text {
+  display: block;
+  line-height: 1.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

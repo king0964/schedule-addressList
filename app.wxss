@@ -1,0 +1,258 @@
+@import "pages/template/tabbar.wxss";
+/**app.wxss**/
+page {
+  font-size: 28rpx;
+  background-color: #efeff4;
+}
+/*** 顶部样式 ***/
+.page-header {
+  height: 78rpx;
+  background-color: #2a579a;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.page-header-bg {
+  height: 36rpx;
+  background-color: #2a579a;
+  position: fixed;
+  top: 108rpx;
+  left: 0;
+  width: 100%;
+}
+.page-header image {
+  width: 20rpx;
+  height: 36rpx;
+  float: left;
+  margin-top: 10rpx;
+  padding-left: 20rpx;
+  margin-right: -20rpx;
+}
+/*** 内容样式 ***/
+.page-content {
+  padding-bottom: 100rpx;
+  position: absolute;
+  top: 110rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.content-box {
+    background-color: #fff;
+}
+/*** 列表样式 ***/
+.swiper-tab{
+    width: 100%;
+    text-align: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 30rpx;
+}
+.content-search-box {
+  padding: 20rpx;
+  position: relative;
+}
+.content-search input {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 8rpx 10rpx 8rpx 48rpx;
+}
+.content-search image {
+  position: absolute;
+  top: 42rpx;
+  left: 30rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.swiper-tab-item{
+    flex: 1; 
+    color:#353535;
+}
+.swiper-tab-item.active{
+    color:#2a579a;
+    border-bottom: 4rpx solid #2a579a;
+}
+/* 纯文本列表样式 */
+.list-line {
+  padding: 12rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+  font-size: 26rpx;
+  color: #a9a9a9;
+  overflow: hidden;
+}
+.list-line .list-img image {
+  width:100rpx;
+  height:100rpx;
+  float:left;
+  vertical-align:middle;
+  margin:16rpx 20rpx 0 0;
+}
+.list-line .list-con {
+  float: left;
+  width: 550rpx;
+}
+.list-line .list-con .list-name {
+  color: #237ad4;
+}
+.list-line .list-con .list-name .right {
+  font-size: 24rpx;
+  float: right;
+  color: #a9a9a9
+}
+.list-line .list-title {
+  color: #000;
+  font-size: 32rpx;
+}
+.list-line .text-right {
+  float: right;
+  margin-top: 20rpx;
+  font-size: 34rpx;
+}
+.list-line text {
+  display: block;
+  line-height: 1.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 带图标列表样式 */
+.content-line {
+  padding: 30rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.content-line-btn {
+  margin: 20rpx 0 28rpx 0;
+}
+.line-last {
+  border-bottom: none;
+}
+.content-line image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin: -12rpx 20rpx 0 0;
+}
+.text-left {
+  font-size: 34rpx;
+}
+.text-right {
+  color: #999;
+  float: right;
+}
+.content-btn {
+  color: #fff;
+  background-color: #448cf6;
+}
+.content-btn {
+  margin-top: 50rpx;
+}
+/*** 表单样式 ***/
+.form-box {
+  position: relative;
+  font-size: 34rpx;
+  background-color: #fff;
+  margin: 20rpx 0 28rpx 0;
+}
+.form-box .form-line {
+  padding: 10rpx 20rpx;
+  overflow: hidden;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.form-box .form-line-last {
+  border-bottom: none;
+}
+.form-box .form-left {
+  width: 180rpx;
+  color: #333;
+  float: left;
+  line-height: 2;
+}
+.form-box .form-left.floatNone {
+  float: none;
+}
+.form-box .form-right {
+  width: 530rpx;
+  line-height: 2;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  float: left;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.form-box .form-right input {
+  margin-top: 10rpx;
+}
+/* placeholder样式 */
+.input-placeholder {
+  margin-top: 2rpx;
+}
+/* 修改radio样式 */
+radio .wx-radio-input {
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+/* 修改checkbox样式 */
+checkbox .wx-checkbox-input {
+  width: 28rpx;
+  height: 28rpx;
+}
+.input-left {
+  margin-left: 12rpx;
+}
+/* swtich整体大小 */
+.wx-switch-input{
+  width: 82rpx !important;
+  height: 40rpx !important;
+}
+/* 白色样式（false的样式） */
+.wx-switch-input::before{
+  width: 80rpx !important;
+  height: 36rpx !important;
+}
+/* 圆点样式 */
+.wx-switch-input::after{
+  width: 36rpx !important;
+  height: 36rpx !important;
+}
+textarea {
+  width: 100%;
+  height: 180rpx;
+}
+slider {
+  margin: 6rpx 0 0 18rpx;
+}
+.form-button {
+  display: flex;
+  background-color: #fff;
+  -webkit-box-shadow: 0 -2px 12px rgba(96, 156, 239, .4);
+  box-shadow: 0 -2px 12px rgba(96, 156, 239, .4);
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #448cf6;
+  margin-top: 60rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 36rpx;
+}
+.form-button .form-button-box {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.form-button .form-button-box.active {
+  background-color: #448cf6;
+  color: #fff;
+}

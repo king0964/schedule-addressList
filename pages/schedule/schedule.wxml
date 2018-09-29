@@ -1,0 +1,161 @@
+<import src="../template/tabbar.wxml" />
+<view class="page-header">
+  <text>日程管理</text>
+</view>
+<view class="page-content">
+  <view class="content-box">
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">领导日程</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">个人日程</view>
+    </view>
+  </view>
+  <view class="schedule-box">
+    <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style="height: {{clientHeight?clientHeight-headerHeight-tabHeight-footerHeight+'px':'auto'}}">
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight-headerHeight-tabHeight-footerHeight+'px':'auto'}}">
+          <view class="schedule-date">
+            <view class="schedule-date-month">
+              <image src="../../images/left.png" class="prev-week" bindtap="clickPrevWeek"></image>{{showYear}}年{{showMonth}}月
+              <image src="../../images/right.png" class="next-week" bindtap="clickNextWeek"></image>
+            </view>
+            <view class="schedule-date-day">
+              <view class="week">
+                <view>
+                  <text>日</text>
+                </view>
+                <view>
+                  <text>一</text>
+                </view>
+                <view>
+                  <text>二</text>
+                </view>
+                <view>
+                  <text>三</text>
+                </view>
+                <view>
+                  <text>四</text>
+                </view>
+                <view>
+                  <text>五</text>
+                </view>
+                <view>
+                  <text>六</text>
+                </view>
+              </view>
+              <view class="day">
+                <block wx:for="{{weeks}}" wx:key="*.this">
+                  <!-- <view><text class="active">20</text></view> -->
+                  <view>
+                    <text class="{{item.date == currentDate && item.month == currentMonth && item.year == currentYear ? 'active' : ''}} {{item.date == selectDate && item.month == selectMonth && item.year == selectYear ? 'selected' : ''}}" bindtap="clickDate" data-date="{{item.date}}" data-month="{{item.month}}"
+                      data-year="{{item.year}}">{{item.date}}</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+          <view class="schedule-line">
+            <navigator url="" open-type="redirect">
+              <view class="text-left">12:00</view>
+              <view class="schedule-con">
+                <text class="schedule-title">张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请</text>
+                <text>中大培训中心考察学习</text>
+              </view>
+            </navigator>
+          </view>
+          <view class="schedule-line">
+            <navigator url="" open-type="redirect">
+              <view class="text-left blue">15:30</view>
+              <view class="schedule-con">
+                <text class="schedule-title">张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请</text>
+                <text>中大培训中心考察学习</text>
+              </view>
+            </navigator>
+          </view>
+          <view class="schedule-line">
+            <navigator url="" open-type="redirect">
+              <view class="text-left blue">15:30</view>
+              <view class="schedule-con">
+                <text class="schedule-title">张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请</text>
+                <text>中大培训中心考察学习</text>
+              </view>
+            </navigator>
+          </view>
+          <button class="content-btn">添加日程</button>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight-headerHeight-tabHeight-footerHeight+'px':'auto'}}">
+          <view class="schedule-date">
+            <view class="schedule-date-month">
+              <image src="../../images/left.png" class="prev-week" bindtap="clickPrevWeek"></image>{{currentYear}}年{{currentMonth}}月
+              <image src="../../images/right.png" class="next-week" bindtap="clickNextWeek"></image>
+            </view>
+            <view class="schedule-date-day">
+              <view class="week">
+                <view>
+                  <text>日</text>
+                </view>
+                <view>
+                  <text>一</text>
+                </view>
+                <view>
+                  <text>二</text>
+                </view>
+                <view>
+                  <text>三</text>
+                </view>
+                <view>
+                  <text>四</text>
+                </view>
+                <view>
+                  <text>五</text>
+                </view>
+                <view>
+                  <text>六</text>
+                </view>
+              </view>
+              <view class="day">
+                <block wx:for="{{weeks}}" wx:key="*.this">
+                  <!-- <view><text class="active">20</text></view> -->
+                  <view>
+                    <text class="{{item.date == currentDate && item.month == currentMonth ? 'active' : ''}} {{item.date == selectDate && item.month == selectMonth ? 'selected' : ''}}" bindtap="clickDate" data-date="{{item.date}}" data-month="{{item.month}}"
+                      data-year="{{item.year}}">{{item.date}}</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+          <view class="schedule-line">
+            <navigator url="" open-type="redirect">
+              <view class="text-left">12:00</view>
+              <view class="schedule-con">
+                <text class="schedule-title">张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请</text>
+                <text>中大培训中心考察学习</text>
+              </view>
+            </navigator>
+          </view>
+          <view class="schedule-line">
+            <navigator url="" open-type="redirect">
+              <view class="text-left blue">15:30</view>
+              <view class="schedule-con">
+                <text class="schedule-title">张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请</text>
+                <text>中大培训中心考察学习</text>
+              </view>
+            </navigator>
+          </view>
+          <view class="schedule-line">
+            <navigator url="" open-type="redirect">
+              <view class="text-left blue">15:30</view>
+              <view class="schedule-con">
+                <text class="schedule-title">张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请张三的请假申请</text>
+                <text>中大培训中心考察学习</text>
+              </view>
+            </navigator>
+          </view>
+          <button class="content-btn">添加日程</button>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+<template is="tab-bar" data="{{tabItems}}" />

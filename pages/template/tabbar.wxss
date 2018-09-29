@@ -1,0 +1,36 @@
+/*底部样式  */
+.page-footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-shadow:0 -1rpx 8rpx rgba(96, 156, 239, .4);
+  box-shadow:0 -1rpx 8rpx rgba(96, 156, 239, .4);
+}
+.page-footer-box {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.page-footer-box navigator {
+  padding: 10rpx 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.page-footer-img {
+  text-align: center;
+}
+.page-footer-img image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.page-footer-text {
+  color: #999;
+  font-size: 20rpx;
+}
+.page-footer-text.actived {
+  color: #788aac;
+}
